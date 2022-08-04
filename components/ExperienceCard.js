@@ -1,4 +1,5 @@
 import {marked} from "marked";
+import Image from "next/image";
 
 const ExperienceCard = ({ exp, content }) => {
   return (
@@ -6,7 +7,7 @@ const ExperienceCard = ({ exp, content }) => {
       <div className="block m-3 p-6 rounded-lg shadow-lg bg-white w-100">
         <div className="d-flex gap-2 mb-2">
         <div className="col-2 d-flex justify-center">
-          <img src={exp.frontmatter.logo} className="img h-auto sm:max-h-12 object-contain"/>
+         {exp.frontmatter.logo &&  <Image src={exp.frontmatter.logo} width="100%" height="100%" alt="" className="img h-auto sm:max-h-12 object-contain"/>}
         </div>
         <div className="col-10">
         <p className="text-gray-700 text-xl font-semibold m-0 align-middle">

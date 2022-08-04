@@ -10,8 +10,9 @@ import Layout from '../components/Layout.js'
 import Navbar from '../components/Navbar.js'
 import Post from "../components/Post.js"
 import Experience from "../components/Experience.js"
+import { AppProps } from 'next/app';
 
-export default function Index({posts, experience}){
+export default function Index({posts, experience} : AppProps){
   return (
   <>
   <Head>
@@ -27,7 +28,7 @@ export default function Index({posts, experience}){
   <Experience experience={experience}/>
   <Layout>
     <div className="posts">
-    {posts.map((post, index) => (
+    {posts.map((post: any, index) => (
       <Post key={index} post={post} />
     ))}
     </div>
