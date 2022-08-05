@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import Image from "next/image";
+import ExportedImage from "next-image-export-optimizer";
 
 export default function Post({ post }) {
   return (
@@ -9,7 +9,7 @@ export default function Post({ post }) {
           <a>{post.frontmatter.title}</a>
         </Link>
       </h2>
-      {post.frontmatter.image && <Image src={post.frontmatter.image} width="100%" height="100%" alt="" />}
+      {post.frontmatter.image && <ExportedImage src={post.frontmatter.image} width="100%" height="100%" alt="" />}
       <p className="subtitle is-4">{post.frontmatter.published}</p>
       <p className="content">{post.frontmatter.teaser}</p>
     </div>

@@ -12,7 +12,34 @@ import Post from "../components/Post.js"
 import Experience from "../components/Experience.js"
 import { AppProps } from 'next/app';
 
-export default function Index({posts, experience} : AppProps){
+
+
+interface ExperienceMD {
+  frontmatter: {
+    company: string;
+    location: string;
+    jobTitle: string;
+    technologies: string[];
+    startDate: string;
+    endDate: string;
+    logo: string;
+  },
+  content: string;
+}
+
+interface ProjectMD {
+  frontmatter: {
+    title: string;
+    teaser: string;
+    published: string;
+    thumbnail: string;
+  },
+  slug: string;
+  content?: string;
+}
+
+
+export default function Index({posts, experience} : {posts: ProjectMD[], experience: ExperienceMD[]}) {
   return (
   <>
   <Head>
@@ -41,12 +68,12 @@ export default function Index({posts, experience} : AppProps){
 export async function getStaticProps() {
   const postFile = fs.readdirSync(path.join("posts"));
   const expFile = fs.readdirSync(path.join("experience"));
-  const sortOrder = (a, z) => {
-    return new Date(z.frontmatter.published) - new Date(a.frontmatter.published)
+  const sortOrder = (a: any, z: any) => {
+    return new Date(z.frontmatter.published).valueOf() - new Date(a.frontmatter.published).valueOf()
   }
 
-  const experienceOrder = (a, z) => {
-    return new Date(z.frontmatter.startDate) - new Date(a.frontmatter.startDate)
+  const experienceOrder = (a: any, z: any) => {
+    return new Date(z.frontmatter.startDate).valueOf() - new Date(a.frontmatter.startDate).valueOf()
   }
 
 
