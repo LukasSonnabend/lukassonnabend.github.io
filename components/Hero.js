@@ -6,7 +6,11 @@ const Hero = () => (
     <div className="row py-8">
       <div className="col-lg-4 d-flex justify-content-center">
         <div className="text-center">
-          <ExportedImage src="/me.jpg" width="100%" height="100%" className="img max-w-full max-h-48 md:max-h-72 h-auto lg:h-64 rounded-full mb-1 mx-auto" alt=""/>
+          <div className="w-full">
+            <div className="w-40 lg:w-64 mx-auto">
+              <ExportedImage src="/me.jpg" width="100%" height="100%" layout="responsive" className="rounded-full" alt=""/>
+            </div>
+          </div>
           <p className="text-4xl">Lukas Sonnabend</p>
           <a href="https://h-da.de/en/" className="d-block text-sm">Darmstadt University of Applied Sciences</a>
           <a href="https://en.ism.de/" className="d-block text-sm">International School of Management</a>

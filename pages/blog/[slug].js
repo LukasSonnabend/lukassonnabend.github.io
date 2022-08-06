@@ -4,9 +4,13 @@ import matter from "gray-matter";
 import {marked} from "marked";
 import Head from "next/head";
 import Layout from "/components/Layout";
+import Navbar from "/components/Navbar";
+import ExportedImage from "next-image-export-optimizer";
+
+
 
 export default function Post({
-  frontmatter: { title, published, teaser },
+  frontmatter: { thumbnail, title, published, teaser },
   content,
 }) {
   return (
@@ -15,8 +19,14 @@ export default function Post({
         <title>{title}</title>
         <meta name="description" content={teaser} />
       </Head>
+      <Navbar />
       <Layout>
-        <h1>{title}</h1>
+        <h1 className="text-center">{title}</h1>
+        <div className="flex justify-center">
+        <div className="w-8/12">
+          <ExportedImage src={thumbnail} width="100%" height="100%" layout="responsive" className="rounded-lg object-fill" alt=""/>
+        </div>
+        </div>
         <p>{published}</p>
         <div dangerouslySetInnerHTML={{ __html: marked(content) }}></div>
       </Layout>

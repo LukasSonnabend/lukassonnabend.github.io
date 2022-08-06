@@ -2,7 +2,7 @@
 title:  "Test Post"
 teaser: 'This is a short teaser for the first post'
 published: '4. August 2022'
-thumbnail: '/images/post-1.jpg'
+thumbnail: '/images/tunafish.jpg'
 ---
 
 Accusamus perferendis **voluptatibus** enim et. Cupiditate dolorum
