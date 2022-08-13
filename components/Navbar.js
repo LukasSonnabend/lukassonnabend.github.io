@@ -1,3 +1,6 @@
+import Link from "next/link";
+
+
 const Navbar = () => {
   const toggleActive = (event) => {
     const navLinks = document.querySelectorAll('.nav-link');
@@ -11,41 +14,28 @@ const Navbar = () => {
   }
 
   return (
-  <nav className="navbar navbar-expand-sm bg-light shadow-sm">
-  <div className="container">
-    <button
-      className="navbar-toggler"
-      type="button"
-      data-bs-toggle="collapse"
-      data-bs-target="#navbarTogglerDemo01"
-      aria-controls="navbarTogglerDemo01"
-      aria-expanded="false"
-      aria-label="Toggle navigation"
-    >
-      <span className="navbar-toggler-icon" />
-    </button>
-    <div className="collapse navbar-collapse" id="navbarTogglerDemo01">
-      <a className="navbar-brand" href="#">
-        Lukas Sonnabend
-      </a>
-      <ul className="navbar-nav me-auto mb-lg-0">
-        <li className="nav-item">
-          <button className="nav-link active" onClick={(e) => {toggleActive(e)}} aria-current="page" href="/">
-            CV
-          </button>
-        </li>
-        <li className="nav-item">
-          <button className="nav-link" onClick={(e) => {toggleActive(e)}} href="#experience">
-            Experience
-          </button>
-        </li>
-        <li className="nav-item">
-          <a className="nav-link">Projects</a>
-        </li>
-      </ul>
-    </div>
-  </div>
-</nav>
+    <nav className="flex shadow-sm">
+        <Link href="/">
+          <a className="text-3xl">
+            Lukas Sonnabend
+          </a>
+        </Link>
+        <ul className="navbar-nav me-auto text-xl ml-2 mb-lg-0 flex">
+          <li className="nav-item flex column justify-center">
+            <button className="nav-link active" onClick={(e) => { toggleActive(e) }} aria-current="page" href="/">
+              CV
+            </button>
+          </li>
+          <li className="mx-5 flex column justify-center">
+            <button className="nav-link" onClick={(e) => { toggleActive(e) }} href="#experience">
+              Experience
+            </button>
+          </li>
+          <li className="nav-item flex column justify-center">
+            <button className="nav-link">Projects</button>
+          </li>
+        </ul>
+    </nav>
 
 
   )

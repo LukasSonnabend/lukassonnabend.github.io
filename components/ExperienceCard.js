@@ -26,17 +26,16 @@ const ExperienceCard = ({ exp, content }) => {
   }
 
   return (
-    <div className="flex justify-center">
-      <div className="block m-3 p-6 rounded-lg shadow-lg bg-white w-100 flex row justify-end">
-        <div className="md:flex gap-2 mb-2">
-          <div className="col-4 col-md-2">
+      <div className="my-3 p-6 rounded-lg shadow-lg dark:bg-slate-800 bg-white w-100">
+        <div className="flex gap-2 mb-2">
+          <div className="">
             {exp.frontmatter.logo && <ExportedImage src={exp.frontmatter.logo} width="100%" height="100%" alt="" className="img h-auto sm:max-h-12 object-contain" />}
           </div>
-          <div className="col-10">
-            <p className="text-gray-700 text-xl font-semibold m-0 align-middle">
+          <div className="">
+            <p className="text-gray-700 dark:text-white text-xl font-semibold m-0 align-middle">
               {exp.frontmatter.jobTitle}
             </p>
-            <p className="text-gray-700 text-base m-0 align-middle">
+            <p className="text-gray-700 dark:text-white text-base m-0 align-middle">
               @ {exp.frontmatter.company} - {exp.frontmatter.location}
             </p>
             <p className="text-gray-500 text-sm m-0 align-middle">
@@ -50,12 +49,8 @@ const ExperienceCard = ({ exp, content }) => {
             </div>
           </div>
         </div>
-        <div className="col-md-10 justify-self-end content" dangerouslySetInnerHTML={{ __html: content }}></div>
+        <div className="content" dangerouslySetInnerHTML={{ __html: content }}></div>
       </div>
-    </div>
-
-
-
   )
 
 }
