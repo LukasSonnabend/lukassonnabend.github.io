@@ -11,15 +11,31 @@ export type ExperienceMD {
   content: string;
 }
 
-
 export type ProjectMD {
-  frontformatter: {
+  frontmatter: {
     title: string;
+    subheading: string;
+    teaser: string;
+    published: string;
+    thumbnail: string;
+    technologies: string[];
+    github: string;
+    demo: string;
+  },
+  slug: string;
+  content?: string;
+}
+
+export type PostMD {
+  frontmatter: {
+    title: string;
+    subheading: string;
     teaser: string;
     published: string;
     thumbnail: string;
   },
-  content: string;
+  slug: string;
+  content?: string;
 }
 
 export type SectionProps = {

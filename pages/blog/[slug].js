@@ -23,7 +23,7 @@ export default function Post({
       <Layout>
         <h1 className="text-center">{title}</h1>
         <div className="flex justify-center">
-        <div className="w-8/12">
+        <div className="w-8/12 max-h-72">
           <ExportedImage src={thumbnail} width="100%" height="100%" layout="responsive" className="rounded-lg object-fill" alt=""/>
         </div>
         </div>

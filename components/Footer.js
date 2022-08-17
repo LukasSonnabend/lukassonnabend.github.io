@@ -1,7 +1,7 @@
 const Footer = () => {
   return (
     <footer className="text-center">
-      <p>&copy; {new Date().getFullYear()} - Powered by Next.js</p>
+      <p>&copy; {new Date().getFullYear()} - Lukas Sonnabend</p>
     </footer>
   );
 };

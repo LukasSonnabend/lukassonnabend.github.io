@@ -5,7 +5,7 @@ import uniJson from "../education.json";
 
 const Hero = () => (
   <>
-    <div className="grid gap-4 grid-cols-12 mx-2 md:mx-0 justify-center py-8">
+    <div className="dark:bg-slate-900 grid gap-4 grid-cols-12 mx-2 md:mx-0 justify-center py-8">
       <div className="col-span-12 md:col-span-4">
         <div className="text-center">
           <div className="w-full">

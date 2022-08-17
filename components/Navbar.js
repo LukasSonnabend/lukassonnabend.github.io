@@ -3,6 +3,8 @@ import Link from "next/link";
 
 const Navbar = () => {
   const toggleActive = (event) => {
+  //TODO: wenn nicht auf "/" dann auf root page linken
+
     const navLinks = document.querySelectorAll('.nav-link');
     navLinks.forEach((link) => {
       link.classList.remove('active');
@@ -14,7 +16,7 @@ const Navbar = () => {
   }
 
   return (
-    <nav className="flex shadow-sm">
+    <nav className="dark:bg-slate-900 flex shadow-sm">
         <Link href="/">
           <a className="text-3xl">
             Lukas Sonnabend

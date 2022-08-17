@@ -26,7 +26,7 @@ const ExperienceCard = ({ exp, content }) => {
   }
 
   return (
-      <div className="my-3 p-6 rounded-lg shadow-lg dark:bg-slate-800 bg-white w-100">
+      <div className="p-6 rounded-lg shadow-lg dark:bg-slate-800 bg-white w-100">
         <div className="flex gap-2 mb-2">
           <div className="">
             {exp.frontmatter.logo && <ExportedImage src={exp.frontmatter.logo} width="100%" height="100%" alt="" className="img h-auto sm:max-h-12 object-contain" />}

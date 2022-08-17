@@ -5,7 +5,12 @@ module.exports = {
     "./components/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      gridAutoRows: {
+        'autofr': 'grid-auto-rows: 1fr',
+      }
+
+    },
   },
   plugins: [],
 }

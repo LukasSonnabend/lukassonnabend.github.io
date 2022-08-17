@@ -12,17 +12,19 @@ import Post from "../components/Post.js";
 import Experience from "../components/Experience.js";
 import { AppProps } from "next/app";
 import PostCard from "../components/PostCard";
-import { ExperienceMD, ProjectMD } from "../components/propTypes";
+import { ExperienceMD, ProjectMD, PostMD } from "../components/propTypes";
 import Section from "../components/Section";
 import ExperienceCard from "../components/ExperienceCard";
-
+import Footer from "../components/Footer.js"
 import { marked } from "marked";
 
 export default function Index({
   posts,
+  projects,
   experience,
 }: {
-  posts: ProjectMD[];
+  projects: ProjectMD[];
+  posts: PostMD[];
   experience: ExperienceMD[];
 }) {
   return (
@@ -32,7 +34,7 @@ export default function Index({
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="description" content="This is the home page" />
       </Head>
-      <div className="dark:bg-slate-800 bg-white text-slate-900 dark:text-white">
+      <div className="text-slate-900 dark:text-white">
       <Navbar />
       <Hero />
       <Section
@@ -46,18 +48,20 @@ export default function Index({
       </Section>
 
       <Section id="projects" sectionTitle="Projects" className="pt-4 shadow-inner">
-        {posts.map((post: any, index) => (
+        {projects.map((post: any, index) => (
           <>
             <PostCard key={index} post={post} />
           </>
         ))}
       </Section>
+      <Footer/>
       </div>
     </>
   );
 }
 
 export async function getStaticProps() {
+  const projectFile = fs.readdirSync(path.join("projects"));
   const postFile = fs.readdirSync(path.join("posts"));
   const expFile = fs.readdirSync(path.join("experience"));
   const sortOrder = (a: any, z: any) => {
@@ -82,7 +86,17 @@ export async function getStaticProps() {
       slug,
       frontmatter,
     };
-  });
+  }).filter((post) => post.frontmatter.published);
+
+  const projects = projectFile.map((filename) => {
+    const slug = filename.replace(".md", "");
+    const markdown = fs.readFileSync(path.join("projects", filename), "utf-8");
+    const { data: frontmatter } = matter(markdown);
+    return {
+      slug,
+      frontmatter,
+    };
+  }).filter((post) => post.frontmatter.published);
 
   const experience = expFile.map((filename) => {
     const slug = filename.replace(".md", "");
@@ -102,6 +116,7 @@ export async function getStaticProps() {
     props: {
       posts: posts.sort(sortOrder),
       experience: experience.sort(experienceOrder),
+      projects: projects.sort(sortOrder)
     },
   };
 }
