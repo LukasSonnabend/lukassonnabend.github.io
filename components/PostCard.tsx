@@ -9,7 +9,6 @@ export default function PostCard({ post }: { post: ProjectMD }) {
       <div className="sm:w-5/12 mr-2 post-card-image flex mb-1 sm:mb-0">
       <Link href={`/projects/${post.slug}`}>
         <ExportedImage
-          layout="intrinsic"
           width="100%"
           height="100%"
           className="object-cover w-full h-full cursor-pointer"
