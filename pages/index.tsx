@@ -49,9 +49,7 @@ export default function Index({
 
       <Section id="projects" sectionTitle="Projects" className="pt-4 shadow-inner">
         {projects.map((post: any, index) => (
-          <>
             <PostCard key={index} post={post} />
-          </>
         ))}
       </Section>
       <Footer/>

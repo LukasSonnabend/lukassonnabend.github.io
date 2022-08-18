@@ -19,8 +19,8 @@ It was nice to actually use vector mathematics for the slingshot paddle and the 
 
 <br/>
 <div class="flex" style="justify-content: space-around">
-  <img class="w-3/12" src="/images/breakout-ingame.jpg" alt="Breakout Game" class="img-fluid">
-  <img class="w-3/12" src="/images/breakout-main.jpg" alt="Breakout Game" class="img-fluid">
+  <img class="w-3/12" height="300px" src="/images/breakout-ingame.jpg" alt="Breakout Game">
+  <img class="w-3/12" height="300px" src="/images/breakout-main.jpg" alt="Breakout Game">
 </div>
 <br/>
 

@@ -14,6 +14,7 @@ export default function PostCard({ post }: { post: ProjectMD }) {
           className="object-cover w-full h-full cursor-pointer"
           src={post.frontmatter.thumbnail}
           alt={post.frontmatter.title}
+          unoptimized={true}
         />
       </Link>
       </div>

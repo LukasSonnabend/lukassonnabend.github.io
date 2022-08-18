@@ -25,4 +25,8 @@ This is also the first time i used typescript together with nextjs and jest for 
 
 The original wordle keeps all code on the client making it very easy (with a bit of javascript knowledge) to find out which word is the word of the day. I decided to create a client/server version of the wordle app. The server picks a random word from the word list and sends its id to the client. To check the guessed word the client always has to send the id with the guess to the client. When the word is guessed correctly a knew word is picked from the list and the id is sent to the client. This makes technically much harder to "hack" the game.
 
-![Screenshot](/images/wordle-1.png)
+
+<div class="flex" style="justify-content: space-around">
+  <img class="w-3/12" height="500px" src="/images/wordle-1.png" alt="Wordle clone Screenshot">
+</div>
+<br/>

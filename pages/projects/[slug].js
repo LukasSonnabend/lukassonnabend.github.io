@@ -36,8 +36,8 @@ export default function Project({
         </a>
         </Link>
         </div>
-        <div className="flex justify-center mb-8">
-        <div className={styles.slug + 'w-full md:w-7/12 mx-4 md:mx-0'} dangerouslySetInnerHTML={{ __html: marked(content) }}></div>
+        <div className="dark:bg-slate-800 flex justify-center mb-8">
+        <div className={'p-4 slug w-full lg:w-7/12 mx-4 lg:mx-0'} dangerouslySetInnerHTML={{ __html: marked(content) }}></div>
         </div>
 
       </Layout>

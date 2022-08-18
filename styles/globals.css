@@ -86,3 +86,50 @@ a {
 html {
   scroll-behavior: smooth;
 }
+
+@media screen and (min-width: 768px) {
+  .slug > h1 {
+    font-size: 3em;
+  }
+
+}
+
+.slug > h1 {
+  font-size: 2em;
+}
+
+.slug > p {
+  font-size: 1.5em;
+  margin-bottom: .5em;
+}
+
+.slug > ul, .slug > ol {
+  list-style: disc;
+  padding-left: 2em;
+  margin: 1em;
+  font-size: 1.5em;
+}
+
+.slug > img {
+  justify-self: center;
+}
+
+.slug > p > img {
+  margin: 0.25em auto;
+}
+
+.slug > div > p >img {
+  display: inline;
+}
+
+.slug > p > a {
+  text-decoration: underline;
+}
+
+.slug > p > a:hover {
+  color: rgb(122, 122, 218);
+}
+
+img {
+  height: revert-layer;
+}

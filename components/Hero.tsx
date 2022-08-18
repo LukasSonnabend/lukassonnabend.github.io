@@ -36,7 +36,7 @@ const Hero = () => (
             </div>
 
             <div className="grid grid-cols-12">
-              <div className="md:p-0 col-span-4">
+              <div className="mb-2 sm:mb-0 md:p-0 col-span-6 sm:col-span-4">
                 <p className="text-xl mb-2 font-semibold">Main Interests</p>
                 <ul className="list-disc pl-6">
                   <li className="sm:mb-2">Web Development</li>
@@ -48,7 +48,6 @@ const Hero = () => (
                 <ul className="p-0">
                   {uniJson &&
                     uniJson.map((uni: educationInstitution) => (
-                      <>
                         <li key={uni.name} className="flex mb-2">
                           <div>
                             {uni.yearGraduated ? (
@@ -64,7 +63,6 @@ const Hero = () => (
                             </a>
                           </div>
                         </li>
-                      </>
                     ))}
                   {/*
                   <li className="sm:mb-2"><FaUniversity className="d-inline col-1"/><span className="col-11">BSc. Computer Science, in progress</span></li>
