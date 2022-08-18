@@ -25,13 +25,13 @@ export default function Project({
           <ExportedImage src={thumbnail} width="300" height="300" layout="fixed" className="rounded-lg object-contain" alt=""/>
         </div>
         <div className="flex justify-center gap-x-10 mt-3">
-        { demo && <Link href={demo} target="_blank">
-          <a className="inline-block px-8 py-2.5 bg-yellow-600 text-white font-bold text-xs leading-tight uppercase rounded shadow-md hover:bg-yellow-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-yellow-800 active:shadow-lg transition duration-150 ease-in-out">
+        { demo && <Link href={demo} passHref>
+          <a target="_blank" className="inline-block px-8 py-2.5 bg-yellow-600 text-white font-bold text-xs leading-tight uppercase rounded shadow-md hover:bg-yellow-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-yellow-800 active:shadow-lg transition duration-150 ease-in-out">
           Go to demo
           </a>
         </Link> }
-        <Link href={github} target="_blank">
-        <a className="inline-block px-8 py-2.5 bg-yellow-600 text-white font-bold text-xs leading-tight uppercase rounded shadow-md hover:bg-yellow-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-yellow-800 active:shadow-lg transition duration-150 ease-in-out">
+        <Link href={github} passHref>
+        <a target="_blank" className="inline-block px-8 py-2.5 bg-yellow-600 text-white font-bold text-xs leading-tight uppercase rounded shadow-md hover:bg-yellow-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-yellow-800 active:shadow-lg transition duration-150 ease-in-out">
           Github
         </a>
         </Link>
