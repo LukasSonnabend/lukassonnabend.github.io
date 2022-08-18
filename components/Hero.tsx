@@ -5,8 +5,8 @@ import uniJson from "../education.json";
 
 const Hero = () => (
   <>
-    <div className="dark:bg-slate-900 grid gap-4 grid-cols-12 mx-2 md:mx-0 justify-center py-8">
-      <div className="col-span-12 md:col-span-4">
+    <div className="grid gap-4 grid-cols-12 px-3 justify-center py-8">
+      <div className="col-span-12 md:col-span-4 flex flex-col justify-center">
         <div className="text-center">
           <div className="w-full">
             <div className="w-40 lg:w-64 mx-auto">
@@ -31,7 +31,7 @@ const Hero = () => (
               <p className="text-xl">
                 My Name is Lukas, i am currently pursuing a Bachelor&apos;s
                 degree in Computer Science at the University of Applied Sciences
-                in Darmstadt, aiming on graduating in the summer of 2023.
+                in Darmstadt, aiming on graduating in summer of 2023.
               </p>
             </div>
 

@@ -16,25 +16,31 @@ const Navbar = () => {
   }
 
   return (
-    <nav className="dark:bg-slate-900 flex shadow-sm">
+    <nav className="dark:bg-slate-900 flex">
         <Link href="/">
-          <a className="text-3xl">
+          <a className="text-lg md:text-3xl pl-2">
             Lukas Sonnabend
           </a>
         </Link>
         <ul className="navbar-nav me-auto text-xl ml-2 mb-lg-0 flex">
           <li className="nav-item flex column justify-center">
+          {/* <Link href="/cv">
             <button className="nav-link active" onClick={(e) => { toggleActive(e) }} aria-current="page" href="/">
               CV
             </button>
+            </Link> */}
           </li>
           <li className="mx-5 flex column justify-center">
-            <button className="nav-link" onClick={(e) => { toggleActive(e) }} href="#experience">
-              Experience
-            </button>
+            <Link href="/#experience">
+              <button className="nav-link" onClick={(e) => { toggleActive(e) }} >
+                Experience
+              </button>
+            </Link>
           </li>
           <li className="nav-item flex column justify-center">
+          <Link href="/#projects">
             <button className="nav-link">Projects</button>
+            </Link>
           </li>
         </ul>
     </nav>

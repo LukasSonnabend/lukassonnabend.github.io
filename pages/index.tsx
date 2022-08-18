@@ -30,11 +30,11 @@ export default function Index({
   return (
     <>
       <Head>
-        <title>Home</title>
+        <title>Lukas Sonnabend | Home</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="description" content="This is the home page" />
       </Head>
-      <div className="text-slate-900 dark:text-white">
+      <div className="dark:bg-slate-900  text-slate-900 dark:text-white">
       <Navbar />
       <Hero />
       <Section

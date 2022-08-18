@@ -1,5 +1,12 @@
+@media screen and (min-width: 768px) {
+  .slug > h1 {
+    font-size: 3em;
+  }
+
+}
+
 .slug > h1 {
-  font-size: 3em;
+  font-size: 2em;
 }
 
 .slug > p {
@@ -21,4 +28,16 @@
 
   margin: 0.25em auto;
   max-height: 400px;
+}
+
+.slug > div > p >img {
+  display: inline;
+}
+
+.slug > p > a {
+  text-decoration: underline;
+}
+
+.slug > p > a:hover {
+  color: rgb(122, 122, 218);
 }

@@ -1,3 +1,4 @@
+import Link from "next/link";
 import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
@@ -15,27 +16,29 @@ export default function Project({
   return (
     <>
       <Head>
-        <title>{title}</title>
+        <title>Lukas Sonnabend | {title}</title>
         <meta name="description" content={teaser} />
       </Head>
       <Navbar />
       <Layout>
         <div className="flex justify-center">
-          <ExportedImage src={thumbnail} width="300" height="300" layout="fixed" className="rounded-lg object-fill" alt=""/>
+          <ExportedImage src={thumbnail} width="300" height="300" layout="fixed" className="rounded-lg object-contain" alt=""/>
         </div>
         <div className="flex justify-center gap-x-10 mt-3">
-        <a class="inline-block px-6 py-2.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out" href={demo} target="_blank">
+        { demo && <Link href={demo} target="_blank">
+          <a className="inline-block px-8 py-2.5 bg-yellow-600 text-white font-bold text-xs leading-tight uppercase rounded shadow-md hover:bg-yellow-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-yellow-800 active:shadow-lg transition duration-150 ease-in-out">
           Go to demo
-        </a>
-        <a class="inline-block px-6 py-2.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out" href={github} target="_blank">
+          </a>
+        </Link> }
+        <Link href={github} target="_blank">
+        <a className="inline-block px-8 py-2.5 bg-yellow-600 text-white font-bold text-xs leading-tight uppercase rounded shadow-md hover:bg-yellow-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-yellow-800 active:shadow-lg transition duration-150 ease-in-out">
           Github
         </a>
+        </Link>
         </div>
         <div className="flex justify-center mb-8">
-        <div className={styles.slug + ' w-7/12'} dangerouslySetInnerHTML={{ __html: marked(content) }}></div>
+        <div className={styles.slug + 'w-full md:w-7/12 mx-4 md:mx-0'} dangerouslySetInnerHTML={{ __html: marked(content) }}></div>
         </div>
-
-
 
       </Layout>
     </>

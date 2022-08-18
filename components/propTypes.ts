@@ -1,4 +1,4 @@
-export type ExperienceMD {
+export type ExperienceMD = {
   frontmatter: {
     company: string;
     location: string;
@@ -11,14 +11,14 @@ export type ExperienceMD {
   content: string;
 }
 
-export type ProjectMD {
+export type ProjectMD = {
   frontmatter: {
     title: string;
     subheading: string;
     teaser: string;
     published: string;
     thumbnail: string;
-    technologies: string[];
+    technology: string[];
     github: string;
     demo: string;
   },
@@ -26,7 +26,7 @@ export type ProjectMD {
   content?: string;
 }
 
-export type PostMD {
+export type PostMD = {
   frontmatter: {
     title: string;
     subheading: string;
@@ -48,7 +48,8 @@ export type SectionProps = {
 export type educationInstitution = {
   name: string;
   degree: string;
-  yearStarted: string;
-  yearGraduated: string | null;
+  yearStarted: number;
+  yearGraduated?: number;
   location: string;
+  url: string;
 }
