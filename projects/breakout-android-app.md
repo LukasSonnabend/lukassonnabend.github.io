@@ -18,9 +18,9 @@ What started out as a relatively simple game ended up becoming more and more com
 It was nice to actually use vector mathematics for the slingshot paddle and the angle of impact between the ball and the paddle.
 
 <br/>
-<div class="flex" style="justify-content: space-around">
-  <img class="w-3/12" height="300px" src="/images/breakout-ingame.jpg" alt="Breakout Game">
-  <img class="w-3/12" height="300px" src="/images/breakout-main.jpg" alt="Breakout Game">
+<div class="flex w-6/12" style="justify-content: space-around; max-height:400px">
+  <img class="w-3/12 object-contain" src="/images/breakout-ingame.jpg" alt="Breakout Game">
+  <img class="w-3/12 object-contain" src="/images/breakout-main.jpg" alt="Breakout Game">
 </div>
 <br/>
 
