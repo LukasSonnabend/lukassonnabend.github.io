@@ -18,7 +18,7 @@ const TechLine = ({technologies, className}: {technologies: string[], className:
   const techIcon = (technology: string, index: number) => {
     switch (technology) {
       case "Ruby":
-        return <Tooltip placement="top" trigger={['hover']} overlay={<span>{technology}</span>}><SiRuby key={index} key={index} className="h-full w-8"  /></Tooltip>;
+        return <Tooltip placement="top" trigger={['hover']} overlay={<span>{technology}</span>}><SiRuby key={index} className="h-full w-8"  /></Tooltip>;
       case "Ruby on Rails":
         return <Tooltip placement="top" trigger={['hover']} overlay={<span>{technology}</span>}><SiRubyonrails key={index} className="h-full w-8" /></Tooltip>;
       case "Vue":
