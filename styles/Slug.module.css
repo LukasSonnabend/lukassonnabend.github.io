@@ -3,10 +3,19 @@
     font-size: 3em;
   }
 
+  .slug > h2 {
+    font-size: 1.75em;
+  }
+
 }
 
 .slug > h1 {
+  font-weight: bold;
   font-size: 2em;
+}
+
+.slug > h2 {
+  font-size: 1.75em;
 }
 
 .slug > p {

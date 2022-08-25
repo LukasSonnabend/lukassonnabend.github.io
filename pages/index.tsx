@@ -34,7 +34,7 @@ export default function Index({
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="description" content="This is the home page" />
       </Head>
-      <div className="dark:bg-slate-900  text-slate-900 dark:text-white">
+      <div className="bg-neutral-50 dark:bg-slate-900  text-slate-900 dark:text-white">
       <Navbar />
       <Hero />
       <Section

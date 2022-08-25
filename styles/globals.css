@@ -97,6 +97,16 @@ html {
   font-size: 2em;
 }
 
+.slug > h2 {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.slug > h1 {
+  font-weight: bold;
+  font-size: 2em;
+}
+
 .slug > p {
   font-size: 1.5em;
   margin-bottom: .5em;

@@ -20,7 +20,7 @@ const ExperienceCard = ({ exp, content }) => {
             <p className="text-gray-500 text-sm m-0 align-middle">
               {exp.frontmatter.startDate} - {exp.frontmatter.endDate ? exp.frontmatter.endDate : 'present'}
             </p>
-            <div className="h-10">
+            <div>
               {exp.frontmatter.technologies && <TechLine technologies={exp.frontmatter.technologies} />}
             </div>
           </div>

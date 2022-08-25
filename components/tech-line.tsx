@@ -8,40 +8,45 @@ import {
   FaNodeJs,
   FaAndroid
 } from "react-icons/fa";
-import { SiJavascript, SiRubyonrails, SiRuby,SiJest } from "react-icons/si";
+import { SiJavascript, SiRubyonrails, SiRuby, SiJest, SiTypescript, SiTailwindcss } from "react-icons/si";
 import { TbBrandNextjs } from "react-icons/tb";
+import Tooltip  from "rc-tooltip";
+import "rc-tooltip/assets/bootstrap.css";
 
 
 const TechLine = ({technologies, className}: {technologies: string[], className: string}) => {
   const techIcon = (technology: string, index: number) => {
     switch (technology) {
       case "Ruby":
-        return <SiRuby key={index} />;
+        return <Tooltip placement="top" trigger={['hover']} overlay={<span>{technology}</span>}><SiRuby key={index} key={index} className="h-full w-8"  /></Tooltip>;
       case "Ruby on Rails":
-        return <SiRubyonrails key={index} className="h-full w-8" />;
+        return <Tooltip placement="top" trigger={['hover']} overlay={<span>{technology}</span>}><SiRubyonrails key={index} className="h-full w-8" /></Tooltip>;
       case "Vue":
-        return <FaVuejs key={index} className="h-full w-8" />;
+        return <Tooltip placement="top" trigger={['hover']} overlay={<span>{technology}</span>}><FaVuejs key={index} className="h-full w-8" /></Tooltip>;
       case "JavaScript":
-        return <SiJavascript key={index} className="h-full w-8" />;
+        return <Tooltip placement="top" trigger={['hover']} overlay={<span>{technology}</span>}><SiJavascript key={index} className="h-full w-8" /></Tooltip>;
       case "Docker":
-        return <FaDocker key={index} className="h-full w-8" />;
+        return <Tooltip placement="top" trigger={['hover']} overlay={<span>{technology}</span>}><FaDocker key={index} className="h-full w-8" /></Tooltip>;
       case "React":
-        return <FaReact key={index} className="h-full w-8" />;
+        return <Tooltip placement="top" trigger={['hover']} overlay={<span>{technology}</span>}><FaReact key={index} className="h-full w-8" /></Tooltip>;
       case "Java":
-        return <FaJava key={index} className="h-full w-8" />;
+        return <Tooltip placement="top" trigger={['hover']} overlay={<span>{technology}</span>}><FaJava key={index} className="h-full w-8" /></Tooltip>;
       case "Gitlab":
-        return <FaGitlab key={index} className="h-full w-8" />;
+        return <Tooltip placement="top" trigger={['hover']} overlay={<span>{technology}</span>}><FaGitlab key={index} className="h-full w-8" /></Tooltip>;
       case "Bitbucket":
-        return <FaBitbucket key={index} className="h-full w-8" />;
+        return <Tooltip placement="top" trigger={['hover']} overlay={<span>{technology}</span>}><FaBitbucket key={index} className="h-full w-8" /></Tooltip>;
       case "Node":
-        return <FaNodeJs key={index} className="h-full w-8" />;
+        return <Tooltip placement="top" trigger={['hover']} overlay={<span>{technology}</span>}><FaNodeJs key={index} className="h-full w-8" /></Tooltip>;
       case "Jest":
-        return <SiJest key={index} className="h-full w-8" />;
+        return <Tooltip placement="top" trigger={['hover']} overlay={<span>{technology}</span>}><SiJest key={index} className="h-full w-8" /></Tooltip>;
       case "Next.js":
-        return <TbBrandNextjs key={index} className="h-full w-8" />;
+        return <Tooltip placement="top" trigger={['hover']} overlay={<span>{technology}</span>}><TbBrandNextjs key={index} className="h-full w-8" /></Tooltip>;
       case "Android Studio":
-        return <FaAndroid key={index} className="h-full w-8" />;
-
+        return <Tooltip placement="top" trigger={['hover']} overlay={<span>{technology}</span>}><FaAndroid key={index} className="h-full w-8" /></Tooltip>;
+      case "TypeScript":
+        return <Tooltip placement="top" trigger={['hover']} overlay={<span>{technology}</span>}><SiTypescript key={index} className="h-full w-8" /></Tooltip>;
+      case "TailwindCSS":
+        return <Tooltip placement="top" trigger={['hover']} overlay={<span>{technology}</span>}><SiTailwindcss key={index} className="h-full w-8" /></Tooltip>;
     }
   };
 
@@ -52,7 +57,7 @@ const TechLine = ({technologies, className}: {technologies: string[], className:
       <p className="text-sm">Technology used:</p>
       <div className={className ? "flex gap-5 h-10 " + className : "flex gap-5 h-10"}>
         {technologies.map((technology, index) => {
-          return techIcon(technology, index);
+            return techIcon(technology, index)
         })}
       </div>
     </>

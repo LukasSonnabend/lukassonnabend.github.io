@@ -5,7 +5,7 @@ import uniJson from "../education.json";
 
 const Hero = () => (
   <>
-    <div className="grid gap-4 grid-cols-12 px-3 justify-center py-8">
+    <div className="grid gap-4 grid-cols-12 px-3 justify-center md:py-8">
       <div className="col-span-12 md:col-span-4 flex flex-col justify-center">
         <div className="text-center">
           <div className="w-full">
@@ -14,6 +14,7 @@ const Hero = () => (
                 src="/me.jpg"
                 width="100%"
                 height="100%"
+                unoptimized={true}
                 layout="responsive"
                 className="rounded-full"
                 alt=""
@@ -29,7 +30,7 @@ const Hero = () => (
             <div className="text-4xl my-2">
               <h1>Hi 👋</h1>
               <p className="text-xl">
-                My Name is Lukas, i am currently pursuing a Bachelor&apos;s
+                My Name is Lukas, I am currently pursuing a Bachelor&apos;s
                 degree in Computer Science at the University of Applied Sciences
                 in Darmstadt, aiming on graduating in summer of 2023.
               </p>
@@ -43,7 +44,7 @@ const Hero = () => (
                   <li>Distributed Systems</li>
                 </ul>
               </div>
-              <div className="col-span-8">
+              <div className="col-span-12 md:col-span-8">
                 <p className="text-xl mb-2 font-semibold">Education</p>
                 <ul className="p-0">
                   {uniJson &&

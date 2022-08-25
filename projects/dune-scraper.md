@@ -33,8 +33,8 @@ As the data was asynchronously loaded the scraper needed to wait for the data to
 
 The data had to be scraped in sets of 50.000 entries as querying the database for more would often result in timeouts. Using offset and limit was the optimal solution to page through the underlying dataset.
 
-I chose ruby first because i wanted to write some ruby code to better understand the language and what it offers. As i also knew how to work with html structures in ruby and how to parse them with nokogiri I decided to write the scraper in ruby. At some point the first crawler was working, but my friend still needed the data of 4 million transactions to be able to write the thesis.
+I chose ruby first because I wanted to write some ruby code to better understand the language and what it offers. As I also knew how to work with html structures in ruby and how to parse them with nokogiri I decided to write the scraper in ruby. At some point the first crawler was working, but my friend still needed the data of 4 million transactions to be able to write the thesis.
 
-So the second implementation was written in node.js. Which turned out to be much faster then the ruby scraper. Here i decided on using Puppeteer over Selenium because research showed that Puppeteer in headless mode is much faster then Selenium.
+So the second implementation was written in node.js. Which turned out to be much faster then the ruby scraper. Here I decided on using Puppeteer over Selenium because research showed that Puppeteer in headless mode is much faster then Selenium.
 
 

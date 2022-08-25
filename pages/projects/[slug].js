@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import Link from "next/link";
 import fs from "fs";
 import path from "path";
@@ -8,15 +9,19 @@ import Layout from "/components/Layout";
 import Navbar from "/components/Navbar";
 import ExportedImage from "next-image-export-optimizer";
 import styles from '../../styles/Slug.module.css'
+import Slider from "/components/Slider";
+
 
 export default function Project({
-  frontmatter: { thumbnail, title, published, teaser, demo, technologies, github },
+  frontmatter: { swiper_slides, thumbnail, title, published, teaser, demo, technologies, github },
   content,
 }) {
   return (
     <>
       <Head>
-        <title>Lukas Sonnabend | {title}</title>
+        <title>{title}</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
         <meta name="description" content={teaser} />
       </Head>
       <Navbar />
@@ -36,14 +41,25 @@ export default function Project({
         </a>
         </Link>
         </div>
-        <div className="dark:bg-slate-800 flex justify-center mb-8">
-        <div className={'p-4 slug w-full lg:w-7/12 mx-4 lg:mx-0'} dangerouslySetInnerHTML={{ __html: marked(content) }}></div>
+        <div className="dark:bg-slate-800 flex flex-col justify-center mb-8">
+        {
+          swiper_slides != null ? (
+            <>
+              <div className={'self-center p-4 slug w-full lg:w-7/12 mx-4 lg:mx-0'} dangerouslySetInnerHTML={{ __html: marked(content[0]) }}></div>
+              <Slider slides={swiper_slides} />
+              <div className={'self-center p-4 slug w-full lg:w-7/12 mx-4 lg:mx-0'} dangerouslySetInnerHTML={{ __html: marked(content[1]) }}></div>
+            </>
+          ) : (<div className={'self-center p-4 slug w-full lg:w-7/12 mx-4 lg:mx-0'} dangerouslySetInnerHTML={{ __html: marked(content) }}></div>)
+
+          }
+
         </div>
 
       </Layout>
     </>
   );
 }
+
 
 export async function getStaticPaths() {
   const files = fs.readdirSync(path.join("projects"));
@@ -60,7 +76,12 @@ export async function getStaticPaths() {
 
 export async function getStaticProps({ params: { slug } }) {
   const markdown = fs.readFileSync(path.join("projects", slug + ".md"), "utf-8");
-  const { data: frontmatter, content } = matter(markdown);
+  let { data: frontmatter, content } = matter(markdown);
+
+  if (content.includes("{{carousel}}")) {
+    content = content.split("{{carousel}}")
+  }
+
   return {
     props: {
       frontmatter,

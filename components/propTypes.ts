@@ -21,6 +21,7 @@ export type ProjectMD = {
     technology: string[];
     github: string;
     demo: string;
+    swiper_slides: string[];
   },
   slug: string;
   content?: string;
