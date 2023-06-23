@@ -4,7 +4,7 @@ location: "Dresden, Germany"
 jobTitle: "Fullstack Developer"
 technologies: ["Ruby on Rails", "Vue", "Gitlab"]
 startDate: '01.04.2021'
-endDate:
+endDate: '28.02.2023'
 logo: '/images/pludoni.png'
 ---
 

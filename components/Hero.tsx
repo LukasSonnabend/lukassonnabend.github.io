@@ -11,12 +11,12 @@ const Hero = () => (
           <div className="w-full">
             <div className="w-40 lg:w-64 mx-auto">
               <ExportedImage
-                src="/me.jpg"
+                src="/me2.jpeg"
                 width="100%"
                 height="100%"
                 unoptimized={true}
                 layout="responsive"
-                className="rounded-full"
+                className="rounded-full object-cover"
                 alt=""
               />
             </div>

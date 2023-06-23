@@ -5,7 +5,7 @@ published: '4. August 2022'
 thumbnail: '/images/wordle.png'
 technology: ['Next.js', 'Heroku', 'Jest', 'TailwindCSS']
 github: "https://github.com/LukasSonnabend/wordle-clone-nextjs-ts"
-demo: "https://endless-wordle-clone-de.herokuapp.com/"
+demo: "https://endless-wordle.netlify.app/"
 ---
 
 # Client/Server Wordle Clone
@@ -15,7 +15,13 @@ In the wake of the 2022 wordle craze I decided to create a clone of the original
 There were two problems I faced while creating this app:
 
 1. Finding a list of german 5-letter words
-2. Deploying the application to heroku
+
+2. ~Deploying the application to heroku~ 
+
+Update 2023-23-06:
+On November 28, 2022 Heroku announced that they will be shutting down their free tier for new applications. This means that the application is no longer available on heroku.
+
+2. Deploying the application to netlify
 
 After some research I found the following resource:
 

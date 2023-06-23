@@ -8,7 +8,7 @@ import {
   FaNodeJs,
   FaAndroid
 } from "react-icons/fa";
-import { SiJavascript, SiRubyonrails, SiRuby, SiJest, SiTypescript, SiTailwindcss } from "react-icons/si";
+import { SiJavascript, SiRubyonrails, SiRuby, SiJest, SiTypescript, SiTailwindcss,SiSubversion, SiIbm, SiSelenium} from "react-icons/si";
 import { TbBrandNextjs } from "react-icons/tb";
 import Tooltip  from "rc-tooltip";
 import "rc-tooltip/assets/bootstrap.css";
@@ -47,6 +47,12 @@ const TechLine = ({technologies, className}: {technologies: string[], className:
         return <Tooltip placement="top" trigger={['hover']} overlay={<span>{technology}</span>}><SiTypescript key={index} className="h-full w-8" /></Tooltip>;
       case "TailwindCSS":
         return <Tooltip placement="top" trigger={['hover']} overlay={<span>{technology}</span>}><SiTailwindcss key={index} className="h-full w-8" /></Tooltip>;
+      case "DB2":
+        return <Tooltip placement="top" trigger={['hover']} overlay={<span>{technology}</span>}><SiIbm key={index} className="h-full w-8" /></Tooltip>;
+      case "SVN":
+        return <Tooltip placement="top" trigger={['hover']} overlay={<span>{technology}</span>}><SiSubversion key="index" className="h-full w-8" /></Tooltip>;
+      case "Selenium":
+        return <Tooltip placement="top" trigger={['hover']} overlay={<span>{technology}</span>}><SiSelenium className="h-full w-8" /></Tooltip>;
     }
   };
 
